@@ -1,6 +1,8 @@
-# connectfourbypaige
+## connectfourbypaige
 
-## Project Title
+# Project Title
+
+Four to Score
 
 ## Description
 
