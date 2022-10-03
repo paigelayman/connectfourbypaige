@@ -14,6 +14,8 @@ Will first create basics of game with HTML pages, followed by CSS styling with f
 
 ## Credits
 
+https://bobbyhadz.com/blog/javascript-addeventlistener-is-not-a-function#:~:text=The%20%22addEventListener%20is%20not%20a,method%20(it's%20case%20sensitive).
+
 ## Trello Board Link:
 
 https://trello.com/invite/b/yLMbebpO/2827b5b212932293238ca90dc9521093/connect-four-project

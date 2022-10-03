@@ -1,4 +1,4 @@
-button {
+.button {
   color:black;
   background-color: #e7c5ed;
   text-align: center;
@@ -6,42 +6,44 @@ button {
   display: flex;
   justify-content: center;
   text-transform: none;
-  text-decoration: none;
+  text-decoration:none;
   width: 25%;
   height: 50px;
   letter-spacing: 5px;
-  font-size: 1.5rem;
-  padding: 7px
-
+  font-size: 125%;
+  padding: 10px
 }
-button:hover{
+
+.button:hover{
   background-color: #6253a3;
   color:#cfccde
 }
+
 .welcome {
   background-color: #e6e1ed;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: center;
-  background-image: url(https://images.unsplash.com/photo-1605347086577-706b21474ed7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80);
+  background-image: url(https://images.pexels.com/photos/6775241/pexels-photo-6775241.jpeg?cs=srgb&dl=pexels-ben-mack-6775241.jpg&fm=jpg);
   background-size: cover;
   height: 1000px;
-  opacity: 0.75
+  opacity: 0.9
 }
-.game{
+
+.game, .score{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: center;
   background-image: url(https://images.pexels.com/photos/129731/pexels-photo-129731.jpeg?cs=srgb&dl=pexels-fwstudio-129731.jpg&fm=jpg);
   background-size: cover;
-
 }
-
 
 h1{
   font-size: 60px;
-  background-color: #e6e1ed;
   margin: 70px;
-  border: 2px solid black
 }
+.gametitle{
+  border: 2px solid black;
+}
+
 h3 {
   font-size: 40px;
   display: block;
@@ -49,9 +51,26 @@ h3 {
   background-color: #e6e1ed;
   margin: 30px;
   margin: 70px;
-  border: 2px solid black
+  border: 2px solid black;
+  /* border-radius: 1.5cm; */
 }
+
 span {
 font-style:italic;
+}
 
+.board {
+  display: grid;
+  grid-template-columns: 90px 90px 90px 90px 90px 90px 90px;
+  grid-template-rows: 90px 90px 90px 90px 90px;
+  justify-content: center;
+  grid-gap: 2px;
+}
+
+.space {
+  background-color: #ebe4f2;
+  border-radius: 3cm;
+}
+.black {
+  background-color: black;
 }
