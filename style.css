@@ -20,3 +20,13 @@ body {
   background-color: #e6e1ed;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+img {
+  width: 100%;
+}
+img {
+  height: 500px;
+  width: 750px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto
+}
