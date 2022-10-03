@@ -19,14 +19,24 @@ button:hover{
 body {
   background-color: #e6e1ed;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
 }
 img {
   width: 100%;
+  border: 2px solid black
 }
 img {
-  height: 500px;
-  width: 750px;
+  height: 400px;
+  width: 650px;
   display: flex;
   justify-content: center;
   margin: 0 auto
+}
+h1{
+  font-size: 50px;
+}
+h3 {
+  font-size: 20px;
+  display: block;
+  padding: 10px;
 }
