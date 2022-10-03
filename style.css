@@ -8,8 +8,10 @@ button {
   text-transform: none;
   text-decoration: none;
   width: 25%;
-  letter-spacing: 2px;
+  height: 50px;
+  letter-spacing: 5px;
   font-size: 1.5rem;
+  padding: 7px
 
 }
 button:hover{
@@ -20,23 +22,29 @@ body {
   background-color: #e6e1ed;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: center;
+  background-image: url(https://images.unsplash.com/photo-1605347086577-706b21474ed7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80);
+  background-size: cover;
+  height: 1000px;
+  opacity: 0.75
 }
-img {
-  width: 100%;
+
+
+h1{
+  font-size: 60px;
+  background-color: #e6e1ed;
+  margin: 70px;
   border: 2px solid black
 }
-img {
-  height: 400px;
-  width: 650px;
-  display: flex;
-  justify-content: center;
-  margin: 0 auto
-}
-h1{
-  font-size: 50px;
-}
 h3 {
-  font-size: 20px;
+  font-size: 40px;
   display: block;
   padding: 10px;
+  background-color: #e6e1ed;
+  margin: 30px;
+  margin: 70px;
+  border: 2px solid black
+}
+span {
+font-style:italic;
+
 }
