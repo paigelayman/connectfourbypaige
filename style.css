@@ -18,7 +18,7 @@ button:hover{
   background-color: #6253a3;
   color:#cfccde
 }
-body {
+.welcome {
   background-color: #e6e1ed;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: center;
@@ -26,6 +26,13 @@ body {
   background-size: cover;
   height: 1000px;
   opacity: 0.75
+}
+.game{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  background-image: url(https://images.pexels.com/photos/129731/pexels-photo-129731.jpeg?cs=srgb&dl=pexels-fwstudio-129731.jpg&fm=jpg);
+  background-size: cover;
+
 }
 
 
