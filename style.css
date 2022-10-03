@@ -1,0 +1,22 @@
+button {
+  color:black;
+  background-color: #e7c5ed;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  text-transform: none;
+  text-decoration: none;
+  width: 25%;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+
+}
+button:hover{
+  background-color: #6253a3;
+  color:#cfccde
+}
+body {
+  background-color: #e6e1ed;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
