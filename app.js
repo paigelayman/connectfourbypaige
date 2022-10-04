@@ -1,7 +1,6 @@
 let oneScore = 0
 let twoScore = 0
-let playerOneTurn = true
-let playerTwoTurn = true
+
 let playerOneScore = document.querySelector('.player-one-score')
 let playerTwoScore = document.querySelector('.player-two-score')
 let gameOver = document.querySelector('.game-over')
@@ -61,9 +60,8 @@ let winningCombos = [
   [10, 18, 26, 34],
   [3, 11, 19, 27]
 ]
-
+let boardClicks = 0
 function playerTurn() {
-  let boardClicks = 0
   for (const space of spaces)
     space.addEventListener('click', () => {
       boardClicks += 1
@@ -72,14 +70,12 @@ function playerTurn() {
           space.addEventListener('click', () => {
             space.style.backgroundColor = '#b091c9'
             space.classList.add('disable')
-            playerTwoTurn === false
           })
       } else {
         for (const space of spaces)
           space.addEventListener('click', () => {
             space.style.backgroundColor = '#d97c7c'
             space.classList.add('disable')
-            playerOneTurn = false
           })
       }
     })
@@ -87,32 +83,32 @@ function playerTurn() {
 playerTurn()
 
 function roundWon() {
-  let space1 = spaces[winningCombos[0]]
-  let space2 = spaces[winningCombos[1]]
-  let space3 = spaces[winningCombos[2]]
-  let space4 = spaces[winningCombos[3]]
-  for (let i = 0; i < winningCombos.length; i++)
-    if (space1 === '' || space2 === '' || space3 === '' || space4 === '') {
+  let wonRound = false
+  for (let i = 0; i < winningCombos.length; i++) {
+    let winner = winningCombos[i]
+    let win1 = spaces[winner[i]][0]
+    let win2 = spaces[winner[i]][1]
+    let win3 = spaces[winner[i]][2]
+    let win4 = spaces[winner[i]][3]
+    if (win1 == '' || win2 == '' || win3 == '' || win4 == '') {
       continue
     }
-  if (
-    space1 === space2 &&
-    space2 === space3 &&
-    space3 === space4
-    // playerTwoTurn === false
-  ) {
-    playerOneScore += 1
-  }
-  if (
-    space1 === space2 &&
-    space2 === space3 &&
-    space3 === space4
-    // playerOneTurn === false
-  ) {
-    playerTwoScore.innerHTML = [playerTwoScore + 1]
+    if (win1 == win2 && win2 == win3 && win3 == win4 && boardClicks % 2 === 1) {
+      console.log('player 1 wins')
+      playerOneScore += 1
+      playerOneScore.innertext = playerOneScore
+      wonRound = true
+      break
+    }
+    if (win1 == win2 && win2 == win3 && win3 == win4 && boardClicks % 2 === 1) {
+      console.log('player 2 wins')
+      playerTwoScore = playerTwoScore + 1
+      playerTwoScore.innertext = `${playerTwoScore}`
+      wonRound = true
+      break
+    }
   }
 }
-
 roundWon()
 //add above scoreboard player_ won play again?
 //add message
