@@ -1,7 +1,9 @@
 let oneScore = 0
 let twoScore = 0
-let playerOneScore = document.querySelector('.comp-score')
-let playerTwoScore = document.querySelector('.player-score')
+let playerOneTurn = true
+let playerTwoTurn = true
+let playerOneScore = document.querySelector('.player-one-score')
+let playerTwoScore = document.querySelector('.player-two-score')
 let gameOver = document.querySelector('.game-over')
 let gameBoard = document.querySelector('.board')
 let spaces = document.getElementsByClassName('space')
@@ -70,12 +72,14 @@ function playerTurn() {
           space.addEventListener('click', () => {
             space.style.backgroundColor = '#b091c9'
             space.classList.add('disable')
+            playerTwoTurn === false
           })
       } else {
         for (const space of spaces)
           space.addEventListener('click', () => {
             space.style.backgroundColor = '#d97c7c'
             space.classList.add('disable')
+            playerOneTurn = false
           })
       }
     })
@@ -83,20 +87,35 @@ function playerTurn() {
 playerTurn()
 
 function roundWon() {
-  for (let i = 0; i < winningCombos.length; i++) {
-    if (winningCombos[i].backgroundColor === '#b091c9') {
-      oneScore += 1
-    } else if (winningCombos[i].backgroundColor === 'd97c7c') {
-      twoScore += 1
-      console.log('two')
+  let space1 = spaces[winningCombos[0]]
+  let space2 = spaces[winningCombos[1]]
+  let space3 = spaces[winningCombos[2]]
+  let space4 = spaces[winningCombos[3]]
+  for (let i = 0; i < winningCombos.length; i++)
+    if (space1 === '' || space2 === '' || space3 === '' || space4 === '') {
+      continue
     }
+  if (
+    space1 === space2 &&
+    space2 === space3 &&
+    space3 === space4
+    // playerTwoTurn === false
+  ) {
+    playerOneScore += 1
   }
-  roundWon()
+  if (
+    space1 === space2 &&
+    space2 === space3 &&
+    space3 === space4
+    // playerOneTurn === false
+  ) {
+    playerTwoScore.innerHTML = [playerTwoScore + 1]
+  }
 }
 
-//add winning combinations
-
-//add to scoreboard
+roundWon()
+//add above scoreboard player_ won play again?
+//add message
 
 function playAgain() {
   for (const space of spaces)
@@ -110,3 +129,4 @@ function playAgain() {
 playAgain()
 
 //make it so the bottom row has to fill first
+// get welcome page to open first
