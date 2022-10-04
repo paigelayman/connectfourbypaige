@@ -28,7 +28,7 @@
   background-color: #e6e1ed;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: center;
-  background-image: url(https://images.pexels.com/photos/6775241/pexels-photo-6775241.jpeg?cs=srgb&dl=pexels-ben-mack-6775241.jpg&fm=jpg);
+  background-image: url(https://images.pexels.com/photos/129731/pexels-photo-129731.jpeg?cs=srgb&dl=pexels-fwstudio-129731.jpg&fm=jpg);
   background-size: cover;
   height: 1000px;
   opacity: 0.9
@@ -76,12 +76,18 @@ font-style:italic;
   background-color: #ebe4f2;
   border-radius: 3cm;
 }
+
 .black {
   background-color: black;
 }
+
 .disable{
   pointer-events: none;
 }
-.enable{
-  pointer-events: all;
+
+.purple{
+color: #b091c9
+}
+.pink{
+  color: #d97c7c
 }
