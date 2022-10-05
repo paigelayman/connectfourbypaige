@@ -106,7 +106,7 @@ let playerTurn = () => {
             newGame[parseInt(space.id)] = 'x'
             space.style.backgroundColor = '#b091c9'
             space.innerText = 'x'
-            space.classList.add('disable', 'x')
+            space.classList.add('disable')
             roundWon()
           })
       } else {
@@ -115,7 +115,7 @@ let playerTurn = () => {
             newGame[parseInt(space.id)] = 'o'
             space.style.backgroundColor = '#d97c7c'
             space.innerText = 'o'
-            space.classList.add('disable', 'o')
+            space.classList.add('disable')
             roundWon()
           })
       }
@@ -142,19 +142,22 @@ let roundWon = () => {
       console.log('player 1 wins')
       oneScore = oneScore + 1
       playerOneScore.innertext = `${oneScore}`
+      reset()
       break
     }
-    if (
-      win1 === win2 &&
-      win2 === win3 &&
-      win3 === win4 &&
-      boardClicks % 2 === 1
-    ) {
-      console.log('player 2 wins')
-      twoScore += 1
-      playerTwoScore.innertext = twoScore
-      break
-    }
+    for (const space of spaces)
+      if (
+        win1 === win2 &&
+        win2 === win3 &&
+        win3 === win4 &&
+        boardClicks % 2 === 1
+      ) {
+        console.log('player 2 wins')
+        twoScore += 1
+        playerTwoScore.innertext = twoScore
+        reset()
+        break
+      }
   }
 }
 
@@ -169,6 +172,11 @@ let playAgain = () => {
       playerOneScore = 0
       playerTwoScore = 0
     })
+}
+let reset = () => {
+  for (const space of spaces) space.style.backgroundColor = '#ebe4f2'
+  for (const space of spaces) space.classList.remove('disable')
+  for (const space of spaces) space.innertext = ''
 }
 // playAgain()
 
