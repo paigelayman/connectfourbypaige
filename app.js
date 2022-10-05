@@ -130,7 +130,6 @@ let roundWon = () => {
     let win2 = newGame[winner[1]]
     let win3 = newGame[winner[2]]
     let win4 = newGame[winner[3]]
-    console.log(win2)
     if (win1 === '' || win2 === '' || win3 === '' || win4 === '') {
       continue
     }
@@ -143,7 +142,7 @@ let roundWon = () => {
       console.log('player 1 wins')
       oneScore = oneScore + 1
       playerOneScore.innertext = `${oneScore}`
-      reset()
+      // reset()
       break
     }
     for (const space of spaces)
@@ -156,14 +155,17 @@ let roundWon = () => {
         console.log('player 2 wins')
         twoScore += 1
         playerTwoScore.innertext = twoScore
-        reset()
+        // reset()
         break
       }
   }
 }
 
-//add above scoreboard player_ won play again?
-//add message
+let reset = () => {
+  for (const space of spaces) space.style.backgroundColor = '#ebe4f2'
+  for (const space of spaces) space.classList.remove('disable')
+  for (const space of spaces) space.innerText = ''
+}
 
 let playAgain = () => {
   for (const space of spaces)
@@ -174,13 +176,8 @@ let playAgain = () => {
       playerTwoScore = 0
     })
 }
-let reset = () => {
-  for (const space of spaces) space.style.backgroundColor = '#ebe4f2'
-  for (const space of spaces) space.classList.remove('disable')
-  for (const space of spaces) space.innerText = ''
-  // playAgain()
-}
+
 //make it so the bottom row has to fill first
 // get welcome page to open first
-// console.log(oneScore)
-// console.log(twoScore)
+//add above scoreboard player_ won play again?
+//add message

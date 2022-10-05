@@ -1,6 +1,6 @@
 # connectfourbypaige
 
-## Project Title
+### Project Title
 
 Four to Score
 
@@ -12,7 +12,7 @@ This connect four game features a welcome screen that describes the game and rul
 
 Will first create basics of game with HTML pages, followed by CSS styling with flexbox to get the appearance of the game done. Then will start on JavaScript and console.log as I go to test each function before moving onto the next.
 
-#### Credits
+### Credits
 
 https://bobbyhadz.com/blog/javascript-addeventlistener-is-not-a-function#:~:text=The%20%22addEventListener%20is%20not%20a,method%20(it's%20case%20sensitive)
 
