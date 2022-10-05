@@ -130,6 +130,7 @@ let roundWon = () => {
     let win2 = newGame[winner[1]]
     let win3 = newGame[winner[2]]
     let win4 = newGame[winner[3]]
+    console.log(win2)
     if (win1 === '' || win2 === '' || win3 === '' || win4 === '') {
       continue
     }
@@ -176,10 +177,9 @@ let playAgain = () => {
 let reset = () => {
   for (const space of spaces) space.style.backgroundColor = '#ebe4f2'
   for (const space of spaces) space.classList.remove('disable')
-  for (const space of spaces) space.innertext = ''
+  for (const space of spaces) space.innerText = ''
+  // playAgain()
 }
-// playAgain()
-
 //make it so the bottom row has to fill first
 // get welcome page to open first
 // console.log(oneScore)
