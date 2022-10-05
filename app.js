@@ -100,6 +100,7 @@ let playerTurn = () => {
   for (const space of spaces)
     space.addEventListener('click', () => {
       boardClicks += 1
+      console.log('board clicks', boardClicks)
       if (boardClicks % 2 == 1) {
         for (const space of spaces)
           space.addEventListener('click', () => {
@@ -130,10 +131,21 @@ let roundWon = () => {
     let win2 = newGame[winner[1]]
     let win3 = newGame[winner[2]]
     let win4 = newGame[winner[3]]
+    console.log(
+      'winner',
+      winner,
+      'win1',
+      win1,
+      'win2',
+      win2,
+      'win3',
+      win3,
+      'win4',
+      win4
+    )
+
     if (win1 === '' || win2 === '' || win3 === '' || win4 === '') {
-      continue
-    }
-    if (
+    } else if (
       win1 === win2 &&
       win2 === win3 &&
       win3 === win4 &&
@@ -141,30 +153,19 @@ let roundWon = () => {
     ) {
       console.log('player 1 wins')
       oneScore = oneScore + 1
-      playerOneScore.innertext = `${oneScore}`
-      // reset()
-      break
+      playerOneScore.innerText = `${oneScore}`
+      console.log(oneScore)
+    } else if (
+      win1 === win2 &&
+      win2 === win3 &&
+      win3 === win4 &&
+      boardClicks % 2 !== 0
+    ) {
+      console.log('player 2 wins')
+      twoScore += 1
+      playerTwoScore.innerText = twoScore
     }
-    for (const space of spaces)
-      if (
-        win1 === win2 &&
-        win2 === win3 &&
-        win3 === win4 &&
-        boardClicks % 2 === 1
-      ) {
-        console.log('player 2 wins')
-        twoScore += 1
-        playerTwoScore.innertext = twoScore
-        // reset()
-        break
-      }
   }
-}
-
-let reset = () => {
-  for (const space of spaces) space.style.backgroundColor = '#ebe4f2'
-  for (const space of spaces) space.classList.remove('disable')
-  for (const space of spaces) space.innerText = ''
 }
 
 let playAgain = () => {
@@ -172,10 +173,11 @@ let playAgain = () => {
     replay.addEventListener('click', () => {
       space.style.backgroundColor = '#ebe4f2'
       space.classList.remove('disable')
-      playerOneScore = 0
-      playerTwoScore = 0
+      oneScore = 0
+      twoScore = 0
     })
 }
+playAgain()
 
 //make it so the bottom row has to fill first
 // get welcome page to open first
