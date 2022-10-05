@@ -39,6 +39,7 @@
   text-align: center;
   background-image: url(https://images.pexels.com/photos/129731/pexels-photo-129731.jpeg?cs=srgb&dl=pexels-fwstudio-129731.jpg&fm=jpg);
   background-size: cover;
+  margin-bottom: 0;
 }
 
 h1{
@@ -91,4 +92,8 @@ color: #b091c9
 }
 .pink{
   color: #d97c7c
+}
+.win-msg{
+font-size: 175%;
+font-style: italic;
 }

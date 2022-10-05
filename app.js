@@ -6,6 +6,7 @@ let gameOver = document.querySelector('.game-over')
 let gameBoard = document.querySelector('.board')
 let spaces = document.getElementsByClassName('space')
 let replay = document.querySelector('.play-again')
+let winMsg = document.querySelector('.win-msg')
 let newGame = [
   '',
   '',
@@ -96,17 +97,16 @@ let winningCombos = [
   [3, 11, 19, 27]
 ]
 let boardClicks = 0
+
 let playerTurn = () => {
   for (const space of spaces)
     space.addEventListener('click', () => {
       boardClicks += 1
-      console.log('board clicks', boardClicks)
       if (boardClicks % 2 == 1) {
         for (const space of spaces)
           space.addEventListener('click', () => {
             newGame[parseInt(space.id)] = 'x'
             space.style.backgroundColor = '#b091c9'
-            space.innerText = 'x'
             space.classList.add('disable')
             roundWon()
           })
@@ -115,7 +115,6 @@ let playerTurn = () => {
           space.addEventListener('click', () => {
             newGame[parseInt(space.id)] = 'o'
             space.style.backgroundColor = '#d97c7c'
-            space.innerText = 'o'
             space.classList.add('disable')
             roundWon()
           })
@@ -131,19 +130,6 @@ let roundWon = () => {
     let win2 = newGame[winner[1]]
     let win3 = newGame[winner[2]]
     let win4 = newGame[winner[3]]
-    console.log(
-      'winner',
-      winner,
-      'win1',
-      win1,
-      'win2',
-      win2,
-      'win3',
-      win3,
-      'win4',
-      win4
-    )
-
     if (win1 === '' || win2 === '' || win3 === '' || win4 === '') {
     } else if (
       win1 === win2 &&
@@ -152,9 +138,9 @@ let roundWon = () => {
       boardClicks % 2 === 0
     ) {
       console.log('player 1 wins')
-      oneScore = oneScore + 1
-      playerOneScore.innerText = `${oneScore}`
-      console.log(oneScore)
+      oneScore += 1
+      playerOneScore.innerText = oneScore
+      winMsg.innerText = 'Player 1 Wins! Play again?'
     } else if (
       win1 === win2 &&
       win2 === win3 &&
@@ -164,6 +150,9 @@ let roundWon = () => {
       console.log('player 2 wins')
       twoScore += 1
       playerTwoScore.innerText = twoScore
+      winMsg.innerText = 'Player 2 Wins! Play again?'
+    } else {
+      playerTurn()
     }
   }
 }
@@ -173,6 +162,7 @@ let playAgain = () => {
     replay.addEventListener('click', () => {
       space.style.backgroundColor = '#ebe4f2'
       space.classList.remove('disable')
+      winMsg.innerText = ''
       oneScore = 0
       twoScore = 0
     })
@@ -180,6 +170,5 @@ let playAgain = () => {
 playAgain()
 
 //make it so the bottom row has to fill first
-// get welcome page to open first
 //add above scoreboard player_ won play again?
 //add message
