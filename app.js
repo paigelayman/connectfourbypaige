@@ -2,7 +2,6 @@ let oneScore = 0
 let twoScore = 0
 let playerOneScore = document.querySelector('.player-one-score')
 let playerTwoScore = document.querySelector('.player-two-score')
-let gameOver = document.querySelector('.game-over')
 let gameBoard = document.querySelector('.board')
 let spaces = document.getElementsByClassName('space')
 let replay = document.querySelector('.play-again')
@@ -97,23 +96,17 @@ let winningCombos = [
   [10, 18, 26, 34],
   [3, 11, 19, 27]
 ]
-// let boardClicks = 0
 
 let playerTurn = () => {
   for (const space of spaces)
     space.addEventListener('click', () => {
-      //boardClicks += 1
       if (turn === 'x') {
-        // for (const space of spaces)
-        //   space.addEventListener('click', () => {
         newGame[parseInt(space.id)] = 'x'
         space.style.backgroundColor = '#b091c9'
         space.classList.add('disable')
         roundWon()
         turn = 'o'
       } else {
-        // for (const space of spaces){
-        //space.addEventListener('click', () => {
         newGame[parseInt(space.id)] = 'o'
         space.style.backgroundColor = '#d97c7c'
         space.classList.add('disable')
@@ -141,6 +134,7 @@ let roundWon = () => {
       oneScore += 1
       playerOneScore.innerText = oneScore
       winMsg.innerText = 'Player 1 Wins! Play again?'
+      gameBoard.classList.add('disable')
       playAgain()
     } else if (
       win1 === win2 &&
@@ -148,10 +142,10 @@ let roundWon = () => {
       win3 === win4 &&
       turn === 'o'
     ) {
-      console.log('player 2 wins')
       twoScore += 1
       playerTwoScore.innerText = twoScore
       winMsg.innerText = 'Player 2 Wins! Play again?'
+      gameBoard.classList.add('disable')
       playAgain()
     } else {
       playerTurn()
@@ -164,11 +158,9 @@ let playAgain = () => {
     replay.addEventListener('click', () => {
       space.style.backgroundColor = '#ebe4f2'
       space.classList.remove('disable')
+      gameBoard.classList.remove('disable')
       winMsg.innerText = ''
-      // oneScore = 0
-      // playerOneScore.innerText = oneScore
-      // twoScore = 0
-      // playerTwoScore.innerText = twoScore
-      playerTurn()
+      newGame[space.id] = ''
     })
+  playerTurn()
 }

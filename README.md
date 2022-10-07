@@ -1,16 +1,18 @@
-# connectfourbypaige
-
-### Project Title
+# Project Title
 
 Four to Score
+![alt text](game1.png)
 
 ### Description
 
-This connect four game features a welcome screen that describes the game and rules, which then directs to a new page where the game is played. Player 1 and Player 2 alternate moves until someone gets 4 in a row. Each time a round is won, the winning player gains a point on the scoreboard. The first player to win three rounds wins the game, at which time a message displays announcing the winner.
+This connect four game features a welcome screen that describes the game and rules, which then directs to a new page where the game is played. Player 1 and Player 2 alternate moves until someone gets 4 in a row. Each time a round is won, the winning player gains a point on the scoreboard. There will then be a message announcing the winner and an option to play again.
 
 ### How to Get Started
 
-Will first create basics of game with HTML pages, followed by CSS styling with flexbox to get the appearance of the game done. Then will start on JavaScript and console.log as I go to test each function before moving onto the next.
+-Fork and clone this repo -`cd` into folder
+-Open in broswer with `open.html`
+-To make edits, open in VS code with `code .`
+-Or, play **here** now on Surge [Four to Score](https://paiges-fourtoscore.surge.sh/)
 
 ### Credits
 
