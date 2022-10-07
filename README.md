@@ -1,7 +1,7 @@
 # Project Title
 
 Four to Score
-![welcome screen](https://photos.google.com/photo/AF1QipPr2CJ4Vfl-f7JroyiF67cIh_sQ24DslCLF7vJX)
+<img src ='https://photos.google.com/photo/AF1QipPr2CJ4Vfl-f7JroyiF67cIh_sQ24DslCLF7vJX' width= '500px'>
 
 ### Description
 
@@ -11,7 +11,8 @@ This connect four game features a welcome screen that describes the game and rul
 
 ### How to Get Started
 
-- Fork and clone this repo -`cd` into folder
+- Fork and clone this repo
+- `cd` into folder
 - Open in broswer with `open.html`
 - To make edits, open in VS code with `code .`
 - Or, play **here** now on Surge [Four to Score](https://paiges-fourtoscore.surge.sh/)
