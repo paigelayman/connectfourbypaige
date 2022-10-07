@@ -1,18 +1,20 @@
 # Project Title
 
 Four to Score
-![alt text](game1.png)
+![welcome screen](https://photos.google.com/photo/AF1QipPr2CJ4Vfl-f7JroyiF67cIh_sQ24DslCLF7vJX)
 
 ### Description
 
 This connect four game features a welcome screen that describes the game and rules, which then directs to a new page where the game is played. Player 1 and Player 2 alternate moves until someone gets 4 in a row. Each time a round is won, the winning player gains a point on the scoreboard. There will then be a message announcing the winner and an option to play again.
 
+![won game](https://photos.google.com/photo/AF1QipN4IPEZ5t8wSuPT4vkB0hsUbWp0GMotmUF-ODtP)
+
 ### How to Get Started
 
--Fork and clone this repo -`cd` into folder
--Open in broswer with `open.html`
--To make edits, open in VS code with `code .`
--Or, play **here** now on Surge [Four to Score](https://paiges-fourtoscore.surge.sh/)
+- Fork and clone this repo -`cd` into folder
+- Open in broswer with `open.html`
+- To make edits, open in VS code with `code .`
+- Or, play **here** now on Surge [Four to Score](https://paiges-fourtoscore.surge.sh/)
 
 ### Credits
 
