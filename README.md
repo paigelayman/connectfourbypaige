@@ -1,6 +1,4 @@
-# Project Title
-
-Four to Score
+# Four to Score
 
 ![welcome screen](https://lh3.googleusercontent.com/Y_0YncXugMTfdYtno-bxB0CLyQlkSrMfiKTM-RSS777waDk_K7wWy1mZFBtynabRz8wNw8PlXGU9tBerq_PJSJnZ4rBh_GEWdbDeZz77YrpzdQDDaKjvU7Jv1T9ail-bjQuKoFiB7Kf7pumTA4_ZPNaBvUuEDFOlxOX5g_hvyRCAqUaJKgR9qHn8mBsFCo8hFmEpAsTByaxFFOULlfWqL1CzpqWj76U_ut0EhEU3PJvcfpFL8i5RJMcVOVsZjIQ76M17dJ2BXzFKe2Q_YBhQQdzGEop19_DgRUXosSQJZA5RYYCGLCtWmNSNe1A8b_MNvKcFY8VPftdXC5gahcYjqxmVp2iXb7FXyL07_Pi5_2ucCdgzsdGeHoNG0c-7hspj2NFcZi1P_f1NGYhWDx0a4zuijkYFaiXaQJqRpwfWEzpLmTBaBzOai0yxJB2lA_k5uX2UbKyA-6-ixJtLmsskuQWDNeKy-Tf9Bp10VE15TBknvhFZDba7jLpCcy6zEGK7ZN9sG8h0hjBFimVFdTO8Wbq7UvtqBdsa7ECcp50IFEyWBKnMuywtaZdDWZ_OELESLQd6uY5vmVuF4fYOjgjWfzsKR2Ougc40IQ7YYX0amt6aode61a06UMuYtJxHnpHWtN5ey_gRrgQBuLZ6ol6-x7iYO2CiWQVjlN2ZsMaoOFU4WIucDwOSd54L0K6fDiOVfPcKYU-w74ZUy8JCEGDkCCDwGD5_zplYeotxhgGnRfawkpDN23jHOv42gIy-zZQP511oi4PEhDyff4AvWqjP2PWYsG_nyb2WVuTf1sIGnNwI53lXxuC5XN0PdEzA_Y1Mt9tpDj923PMppec632Uus-ClsfgcXP0wcg19X4bZ2KUjO6q2DzCQE7i0Wmy2SyuzPDYWePFGTGffmGAqnayJf8QYaSOpJCKVr72pyg=w887-h866-no?authuser=0)
 
@@ -17,6 +15,15 @@ This connect four game features a welcome screen that describes the game and rul
 - Open in broswer with `open.html`
 - To make edits, open in VS code with `code .`
 - Or, play **here** now on Surge [Four to Score](https://paiges-fourtoscore.surge.sh/)
+
+### Main JavaScript Elements Used:
+
+- `document.querySelector()` and `document.getElementsClassName()` were used to access my HTML elements and use the in my JavaScript
+- ES6 Syntax was used to name all functions
+- `addEventListener` was used to control what happens when spaces are clicked
+- A `for` loop was used to loop through the winning combination array
+- Used `for, of` loop was used to manipulate a single space out of my elements with the class of 'spaces'
+- `parseInt()` was used to manipulate the ID of the board spaces and use their numerical value
 
 ### Credits
 
