@@ -1,6 +1,6 @@
 # Four to Score
 
-![welcome](./images/Four-to-Score-Welcome.png)
+<img src="./images/Four-to-Score-Board.png" width='400px' height='375px'/>
 
 ### Description
 
