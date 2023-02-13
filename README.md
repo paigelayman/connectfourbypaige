@@ -1,12 +1,12 @@
 # Four to Score
 
-<img src="./images/Four-to-Score-Board.png" width='400px' height='375px'/>
+<img src="./images/Four-to-Score-Welcome.png" width='400px' height='375px'/>
 
 ### Description
 
 This connect four game features a welcome screen that describes the game and rules, which then directs to a new page where the game is played. Player 1 and Player 2 alternate moves until someone gets 4 in a row. Each time a round is won, the winning player gains a point on the scoreboard. There will then be a message announcing the winner and an option to play again.
 
-![board](./images/Four-to-Score-Board.png)
+<img src="./images/Four-to-Score-Board.png" width='400px' height='375px'/>
 
 ### How to Get Started
 
